@@ -70,10 +70,9 @@ impl Schedulable for InternedSystemSet {
     type GroupMetadata = Chain;
 
     fn into_config(self) -> ScheduleConfig<Self> {
-        assert!(
-            self.system_type().is_none(),
-            "configuring system type sets is not allowed"
-        );
+        // [margarine] allow-system-type-set-conditions: upstream asserts
+        // `self.system_type().is_none()` here. We allow it so run conditions can be attached to
+        // a system that someone else added (see `margarine_render::register_pass`).
 
         ScheduleConfig {
             node: self,
