@@ -6,7 +6,7 @@
 //! - Lens Distortion
 //! - Vignette
 
-mod chromatic_aberration;
+pub mod chromatic_aberration;
 mod lens_distortion;
 mod vignette;
 
@@ -240,7 +240,7 @@ impl SpecializedRenderPipeline for PostProcessingPipeline {
     }
 }
 
-pub(crate) fn post_processing(
+pub fn post_processing(
     view: ViewQuery<(
         &ViewTarget,
         &PostProcessingPipelineId,

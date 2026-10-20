@@ -761,7 +761,7 @@ impl DepthOfFieldPipelines {
     }
 }
 
-pub(crate) fn depth_of_field(
+pub fn depth_of_field(
     view: ViewQuery<(
         &ViewUniformOffset,
         &ViewTarget,

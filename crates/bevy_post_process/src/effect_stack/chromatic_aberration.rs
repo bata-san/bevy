@@ -22,7 +22,7 @@ pub(super) static DEFAULT_CHROMATIC_ABERRATION_LUT_DATA: [u8; 12] =
     [255, 0, 0, 255, 0, 255, 0, 255, 0, 0, 255, 255];
 
 #[derive(Resource)]
-pub(crate) struct DefaultChromaticAberrationLut(pub(crate) Handle<Image>);
+pub struct DefaultChromaticAberrationLut(pub(crate) Handle<Image>);
 
 /// Adds colored fringes to the edges of objects in the scene.
 ///

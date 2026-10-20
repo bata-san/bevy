@@ -16,7 +16,7 @@ use bevy_render::{
     ExtractSchedule, GpuResourceAppExt, Render, RenderApp, RenderStartup, RenderSystems,
 };
 
-mod buffers;
+pub mod buffers;
 mod compensation_curve;
 mod pipeline;
 mod settings;
@@ -40,7 +40,7 @@ use bevy_core_pipeline::{
 pub struct AutoExposurePlugin;
 
 #[derive(Resource)]
-struct AutoExposureResources {
+pub struct AutoExposureResources {
     histogram: Buffer,
 }
 
@@ -119,7 +119,7 @@ fn queue_view_auto_exposure_pipelines(
     }
 }
 
-fn auto_exposure(
+pub fn auto_exposure(
     view: ViewQuery<(
         &ViewUniformOffset,
         &ViewTarget,

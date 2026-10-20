@@ -181,7 +181,7 @@ impl ScreenSpaceAmbientOcclusionQualityLevel {
     }
 }
 
-fn ssao(
+pub fn ssao(
     view: ViewQuery<(
         &ExtractedCamera,
         &SsaoPipelineId,
@@ -275,7 +275,7 @@ fn ssao(
 }
 
 #[derive(Resource)]
-struct SsaoPipelines {
+pub struct SsaoPipelines {
     preprocess_depth_pipeline: CachedComputePipelineId,
     spatial_denoise_pipeline: CachedComputePipelineId,
 
@@ -453,7 +453,7 @@ impl FromWorld for SsaoPipelines {
 }
 
 #[derive(PartialEq, Eq, Hash, Clone)]
-struct SsaoPipelineKey {
+pub struct SsaoPipelineKey {
     quality_level: ScreenSpaceAmbientOcclusionQualityLevel,
     temporal_jitter: bool,
 }

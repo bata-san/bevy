@@ -24,7 +24,7 @@ pub mod experimental {
     }
 }
 
-mod atmosphere;
+pub mod atmosphere;
 mod cluster;
 pub mod contact_shadows;
 #[cfg(feature = "bevy_gltf")]
@@ -49,10 +49,10 @@ mod parallax;
 mod pbr_material;
 mod prepass;
 mod render;
-mod ssao;
-mod ssr;
-mod transmission;
-mod volumetric_fog;
+pub mod ssao;
+pub mod ssr;
+pub mod transmission;
+pub mod volumetric_fog;
 
 use bevy_color::{Color, LinearRgba};
 

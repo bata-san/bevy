@@ -10,7 +10,7 @@ use bevy_render::{
 use super::{pipeline::AutoExposureUniform, AutoExposure};
 
 #[derive(Resource, Default)]
-pub(super) struct AutoExposureBuffers {
+pub struct AutoExposureBuffers {
     pub(super) buffers: EntityHashMap<AutoExposureBuffer>,
 }
 
